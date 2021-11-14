@@ -9,11 +9,11 @@ x = input("Continue? (y/n) \n")
 while (x!= 'n'):
     user_list.append(get_userinfo)
 
-def user_graph(outvec):
+def user_graph():
     print("How would you like to view your result compare to the average people surveyed in U.S?\n ")
     ask = input("a. Gender, b. Race, c. Age").lower()
     while not( ask == 'a' or ask == 'b' or ask == 'c'):
-        ask = input("Please enter valid response: (a/b/c)")
+        ask = input("Please enter valid response: (a/b/c)\n")
     if ask == 'a':
         gender()
     elif ask == 'b':
@@ -92,8 +92,8 @@ def cumulation(user_list):
     print("The average age group is: ", ave_age)
     user_graph()
 
-
+user_graph()
 depression_stats()
-cumulation(user_list)
+#cumulation(user_list)
 
 #def comparison(survey, average):
