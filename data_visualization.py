@@ -94,5 +94,6 @@ def cumulation(user_list):
 
 
 depression_stats()
+cumulation(user_list)
 
 #def comparison(survey, average):
