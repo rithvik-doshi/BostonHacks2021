@@ -1,18 +1,19 @@
 #code is written with the data having been gathered in mind 
 import matplotlib.pyplot as plt
 import numpy as np
+from userinfo import*
 
 #outvec = get_userinfo() 
 user_list = []
-x = input("Continue? (y/n)")
+x = input("Continue? (y/n) \n")
 while (x!= 'n'):
     user_list.append(get_userinfo)
 
-def user_graph(outvec):
-    print("How would you like to view your result?\n ")
+def user_graph():
+    print("How would you like to view your result compare to the average people surveyed in U.S?\n ")
     ask = input("a. Gender, b. Race, c. Age").lower()
     while not( ask == 'a' or ask == 'b' or ask == 'c'):
-        ask = input("Please enter valid response: (a/b/c)")
+        ask = input("Please enter valid response: (a/b/c)\n")
     if ask == 'a':
         gender()
     elif ask == 'b':
@@ -81,15 +82,18 @@ def age():
 def cumulation(user_list):
     dep_score = 0
     for i in range(len(user_list)):
-        dep_score += user_list[i][-1] #im assuming the score is the last value of user
+        dep_score += int(user_list[i][-1]) #im assuming the score is the last value of user
+        ave_age = int(user_list[i][1])
     dep_score = dep_score / len(user_list)
     if dep_score < 19:
-        print("Not depressed")
+        print("The average person surveyed is: Not depressed")
     else:
-        print("Depressed")
+        print("The average person surveyed is: Depressed")
+    print("The average age group is: ", ave_age)
+    user_graph()
 
-
-
+user_graph()
 depression_stats()
+#cumulation(user_list)
 
 #def comparison(survey, average):
