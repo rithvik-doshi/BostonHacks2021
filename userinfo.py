@@ -16,20 +16,16 @@ def get_userinfo():
 		outnum = userid+1;
 		f.write(str(outnum))
 		f.close()
-	print(userid)
 	age = input("Please enter your age: ")
 	while (not age.isdigit()):
 		age = input("Please enter a valid age (integer): ")
-	print(age)
 
         # Front-end: connect all these prompts to survey interface.
 		# Data: On submit, add this data to a database
 
 	gender = input("Please indicate your gender : ").lower()
-	print(gender)
 
 	race = input("Please indicate your race : ").lower()
-	print(race)
 
 	# h_i = input("Please indicate your approximate household income : ").capitalize()
 	# print(h_i)
